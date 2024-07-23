@@ -1,0 +1,250 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./background.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-image: url(background_img.jpg); */
+    margin-bottom: 500px;
+    margin-top: 50px;
+    margin-left: 10px;
+    /* margin-left: 200px;
+    margin-right: 200px; */
+    background-color: #a395e7;
+    background-image: url(back_img.jpg)
+   
+    
+}
+
+.to-do-box {
+    width: 400px;
+    height: auto;
+    min-height: 400px;
+    padding: 30px;
+    background: transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    background-color: pink;
+    border:3px solid #5b518f;
+    background-image: url(background_img4.avif);
+    
+}
+
+h1 {
+    color: white;
+    font-size: 0px;
+    text-align: center;
+    margin-bottom: 110px;
+    font-family:copperplate;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border: 2px solid #463c7b;
+    border-radius: 20px;
+}
+
+.todo-list-input {
+    flex: 1;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    background-color: transparent;
+    border: 2px solid #e6b7eca1;
+    border-radius: 30px;
+    color: #463c7b;
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.todo-list-input::placeholder {
+    color: #fff;
+    font-weight: 700;
+    color: #463c7b;
+}
+
+.button {
+    border: none;
+    outline: none;
+    background: #e6b7eca1;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 40px;
+    height: 42px;
+    /* border: 2px solid #463c7b; */
+}
+
+.image {
+    margin: 55px auto 0;
+    display: block;
+}
+
+.todo {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #463c7b;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 12px;
+    border: 2px solid #e6b7eca1;
+    transition: all 0.2s ease;
+}
+
+.todo:first-child {
+    margin-top: 0;
+}
+
+.todo:last-child {
+    margin-bottom: 0;
+}
+
+.todo:hover {
+    background-color: #463c7b;
+    /* jjj */
+}
+
+.todo label {
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #eee;
+}
+
+.todo span {
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+span::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-left: -30px;
+    border-radius: 100px;
+    border: 2px solid #e6b7eca1;
+}
+
+input[type='checkbox'] {
+    visibility: hidden;
+}
+
+input:checked+span {
+    text-decoration: line-through
+}
+
+.todo:hover input:checked+span::before,
+input:checked+span::before {
+    background: url(./check.svg) 50% 50% no-repeat #fff;
+    border-color: #fff;
+    
+
+}
+
+.todo:hover span::before {
+    border-color:#eee;
+   
+}
+
+.todo .delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #eee;
+    font-size: 24px;
+}
+
+.todos-container {
+    height: 300px;
+    overflow: overlay;
+}
+
+.todos-container::-webkit-scrollbar-track {
+    background: rgb(247, 247, 247);
+    border-radius: 20px
+}
+
+.todos-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.todos-container:hover::-webkit-scrollbar {
+    width: 7px;
+    background-color: #463c7b;
+}
+
+.todos-container::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+    border-radius: 20px;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    
+}
+
+.list{
+    color: #463c7b;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid #e6b7eca1;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 2px solid #463c7b;
+    font-weight: 550;
+    background-color: #f3f2f733;
+}
+
+.list.active,
+.list:hover {
+    /* background-color: #e6b7eca1; */
+    background-color: #463c7b;
+    color: #eee;
+}
+
+.delete-button {
+    display: flex;
+    color: #463c7b;
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid #463c7b;
+    border-radius: 100px;
+    font-weight: 550;
+}
+
+.delete-button:hover {
+
+    background-color: #463c7b;
+    border-radius: 100px;
+    color: #eee;
+}
+
+
+
+
+
+
+
